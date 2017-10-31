@@ -1,0 +1,1078 @@
+# depslib dependency file v1.0
+1301292573 source:d:\computer\c++\santosh\tryagain\main.cpp
+	"SDL.h"
+	"SDL_image.h"
+	<string>
+	<SDL_mixer.h>
+	"heli.h"
+	"loader.h"
+	"timer.h"
+	"window.h"
+
+1199052374 c:\sdl\include\sdl.h
+	"SDL_main.h"
+	"SDL_stdinc.h"
+	"SDL_audio.h"
+	"SDL_cdrom.h"
+	"SDL_cpuinfo.h"
+	"SDL_endian.h"
+	"SDL_error.h"
+	"SDL_events.h"
+	"SDL_loadso.h"
+	"SDL_mutex.h"
+	"SDL_rwops.h"
+	"SDL_thread.h"
+	"SDL_timer.h"
+	"SDL_video.h"
+	"SDL_version.h"
+	"begin_code.h"
+	"close_code.h"
+
+1199052374 c:\sdl\include\sdl_main.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+	"begin_code.h"
+	"close_code.h"
+
+1199052374 c:\sdl\include\sdl_stdinc.h
+	"SDL_config.h"
+	<sys/types.h>
+	<stdio.h>
+	<stdlib.h>
+	<stddef.h>
+	<stdarg.h>
+	<stdlib.h>
+	<malloc.h>
+	<stddef.h>
+	<stdarg.h>
+	<memory.h>
+	<string.h>
+	<strings.h>
+	<inttypes.h>
+	<stdint.h>
+	<ctype.h>
+	<iconv.h>
+	"begin_code.h"
+	<alloca.h>
+	<malloc.h>
+	<malloc.h>
+	<malloc.h>
+	<stdlib.h>
+	"close_code.h"
+
+1199052374 c:\sdl\include\sdl_config.h
+	"SDL_platform.h"
+	<stdarg.h>
+
+1199052374 c:\sdl\include\sdl_platform.h
+
+1199052374 c:\sdl\include\begin_code.h
+
+1199052374 c:\sdl\include\close_code.h
+
+1199052374 c:\sdl\include\sdl_audio.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_endian.h"
+	"SDL_mutex.h"
+	"SDL_thread.h"
+	"SDL_rwops.h"
+	"begin_code.h"
+	"close_code.h"
+
+1199052374 c:\sdl\include\sdl_error.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1199052374 c:\sdl\include\sdl_endian.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1199052374 c:\sdl\include\sdl_mutex.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1199052374 c:\sdl\include\sdl_thread.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_mutex.h"
+	"begin_code.h"
+	<process.h>
+	"close_code.h"
+
+1199052374 c:\sdl\include\sdl_rwops.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1199052374 c:\sdl\include\sdl_cdrom.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1199052374 c:\sdl\include\sdl_cpuinfo.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1199052374 c:\sdl\include\sdl_events.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_active.h"
+	"SDL_keyboard.h"
+	"SDL_mouse.h"
+	"SDL_joystick.h"
+	"SDL_quit.h"
+	"begin_code.h"
+	"close_code.h"
+
+1199052374 c:\sdl\include\sdl_active.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1199052374 c:\sdl\include\sdl_keyboard.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_keysym.h"
+	"begin_code.h"
+	"close_code.h"
+
+1199052374 c:\sdl\include\sdl_keysym.h
+
+1199052374 c:\sdl\include\sdl_mouse.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_video.h"
+	"begin_code.h"
+	"close_code.h"
+
+1199052374 c:\sdl\include\sdl_video.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"SDL_rwops.h"
+	"begin_code.h"
+	"close_code.h"
+
+1199052374 c:\sdl\include\sdl_joystick.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1199052374 c:\sdl\include\sdl_quit.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+
+1199052374 c:\sdl\include\sdl_loadso.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1199052374 c:\sdl\include\sdl_timer.h
+	"SDL_stdinc.h"
+	"SDL_error.h"
+	"begin_code.h"
+	"close_code.h"
+
+1199052374 c:\sdl\include\sdl_version.h
+	"SDL_stdinc.h"
+	"begin_code.h"
+	"close_code.h"
+
+1227459890 c:\sdl\include\sdl_image.h
+	"SDL.h"
+	"SDL_version.h"
+	"begin_code.h"
+	"close_code.h"
+
+1184956580 c:\sdl\include\sdl_mixer.h
+	"SDL_types.h"
+	"SDL_rwops.h"
+	"SDL_audio.h"
+	"SDL_endian.h"
+	"SDL_version.h"
+	"begin_code.h"
+	"close_code.h"
+
+1199052374 c:\sdl\include\sdl_types.h
+	"SDL_stdinc.h"
+
+1301293603 d:\computer\c++\santosh\tryagain\heli.h
+	"loader.h"
+
+1301227307 d:\computer\c++\santosh\tryagain\loader.h
+	"SDL.h"
+	"SDL_image.h"
+	<string>
+	<SDL_mixer.h>
+
+1301219457 d:\computer\c++\santosh\tryagain\timer.h
+
+1301225048 d:\computer\c++\santosh\tryagain\window.h
+	"heli.h"
+
+1301562428 source:c:\users\santosh\desktop\tryagain\main.cpp
+	"SDL.h"
+	"SDL_image.h"
+	<string>
+	<SDL_mixer.h>
+	"heli.h"
+	"loader.h"
+	"timer.h"
+	"window.h"
+
+1301562428 c:\users\santosh\desktop\tryagain\heli.h
+	"loader.h"
+
+1301562335 c:\users\santosh\desktop\tryagain\loader.h
+	"SDL.h"
+	"SDL_image.h"
+	<string>
+	<SDL_mixer.h>
+
+1301219457 c:\users\santosh\desktop\tryagain\timer.h
+
+1301560555 c:\users\santosh\desktop\tryagain\window.h
+	"heli.h"
+	"loader.h"
+
+1301562428 source:e:\c++ project  backup\tryagain\main.cpp
+	"SDL.h"
+	"SDL_image.h"
+	<string>
+	<SDL_mixer.h>
+	"heli.h"
+	"loader.h"
+	"timer.h"
+	"window.h"
+
+1301562428 e:\c++ project  backup\tryagain\heli.h
+	"loader.h"
+
+1301562335 e:\c++ project  backup\tryagain\loader.h
+	"SDL.h"
+	"SDL_image.h"
+	<string>
+	<SDL_mixer.h>
+
+1301219457 e:\c++ project  backup\tryagain\timer.h
+
+1301560555 e:\c++ project  backup\tryagain\window.h
+	"heli.h"
+	"loader.h"
+
+1302165057 source:c:\users\umanga\desktop\heli\tryagain\main.cpp
+	"SDL.h"
+	"SDL_image.h"
+	<string>
+	<SDL_mixer.h>
+	"heli.h"
+	"loader.h"
+	"timer.h"
+	"window.h"
+	"collision.h"
+
+1302165007 c:\users\umanga\desktop\heli\tryagain\heli.h
+	"loader.h"
+	"collision.h"
+
+1302163041 c:\users\umanga\desktop\heli\tryagain\loader.h
+	"SDL.h"
+	"SDL_image.h"
+	<string>
+	<SDL_mixer.h>
+	"collision.h"
+
+1302163563 c:\users\umanga\desktop\heli\tryagain\timer.h
+
+1302159469 c:\users\umanga\desktop\heli\tryagain\window.h
+	"heli.h"
+	"loader.h"
+
+1302164974 c:\users\umanga\desktop\heli\tryagain\collision.h
+	<cstdlib>
+
+1302163580 source:c:\users\umanga\desktop\heli\tryagain\timer.cpp
+	"timer.h"
+	<SDL.h>
+
+1302163580 source:e:\c++ project  backup\tryagain\tryagain\timer.cpp
+	"timer.h"
+	<SDL.h>
+
+1302163563 e:\c++ project  backup\tryagain\tryagain\timer.h
+
+1302165976 source:e:\c++ project  backup\tryagain\tryagain\main.cpp
+	"SDL.h"
+	"SDL_image.h"
+	<string>
+	<SDL_mixer.h>
+	"heli.h"
+	"loader.h"
+	"timer.h"
+	"window.h"
+	"collision.h"
+
+1302165976 e:\c++ project  backup\tryagain\tryagain\heli.h
+	"loader.h"
+	"collision.h"
+
+1302163041 e:\c++ project  backup\tryagain\tryagain\loader.h
+	"SDL.h"
+	"SDL_image.h"
+	<string>
+	<SDL_mixer.h>
+	"collision.h"
+
+1302170004 e:\c++ project  backup\tryagain\tryagain\collision.h
+	<cstdlib>
+
+1302159469 e:\c++ project  backup\tryagain\tryagain\window.h
+	"heli.h"
+	"loader.h"
+
+1302189787 source:c:\users\santosh\desktop\tryagain\tryagain\timer.cpp
+	"timer.h"
+	<SDL.h>
+
+1302163563 c:\users\santosh\desktop\tryagain\tryagain\timer.h
+
+1302250051 source:c:\users\santosh\desktop\tryagain\tryagain\main.cpp
+	"SDL.h"
+	"SDL_image.h"
+	<string>
+	<SDL_mixer.h>
+	"heli.h"
+	"loader.h"
+	"timer.h"
+	"window.h"
+	"collision.h"
+	"game_functions.h"
+	"play.h"
+
+1302210268 c:\users\santosh\desktop\tryagain\tryagain\heli.h
+	"loader.h"
+	"collision.h"
+
+1302247030 c:\users\santosh\desktop\tryagain\tryagain\loader.h
+	"SDL.h"
+	"SDL_image.h"
+	<string>
+	<SDL_mixer.h>
+	"collision.h"
+
+1302170811 c:\users\santosh\desktop\tryagain\tryagain\collision.h
+	<cstdlib>
+
+1302247449 c:\users\santosh\desktop\tryagain\tryagain\window.h
+	"heli.h"
+	"loader.h"
+
+1302247424 c:\users\santosh\desktop\tryagain\tryagain\game_functions.h
+
+1302257370 c:\users\santosh\desktop\tryagain\tryagain\play.h
+
+1302189787 source:c:\users\santosh\desktop\tryagain no quit\tryagain\timer.cpp
+	"timer.h"
+	<SDL.h>
+
+1302163563 c:\users\santosh\desktop\tryagain no quit\tryagain\timer.h
+
+1302284720 source:c:\users\santosh\desktop\tryagain no quit\tryagain\main.cpp
+	"SDL.h"
+	"SDL_image.h"
+	<string>
+	<SDL_mixer.h>
+	"heli.h"
+	"loader.h"
+	"timer.h"
+	"window.h"
+	"collision.h"
+	"game_functions.h"
+	"play.h"
+
+1302210268 c:\users\santosh\desktop\tryagain no quit\tryagain\heli.h
+	"loader.h"
+	"collision.h"
+
+1302247030 c:\users\santosh\desktop\tryagain no quit\tryagain\loader.h
+	"SDL.h"
+	"SDL_image.h"
+	<string>
+	<SDL_mixer.h>
+	"collision.h"
+
+1302170811 c:\users\santosh\desktop\tryagain no quit\tryagain\collision.h
+	<cstdlib>
+
+1302247449 c:\users\santosh\desktop\tryagain no quit\tryagain\window.h
+	"heli.h"
+	"loader.h"
+
+1302285160 c:\users\santosh\desktop\tryagain no quit\tryagain\game_functions.h
+
+1302284373 c:\users\santosh\desktop\tryagain no quit\tryagain\play.h
+
+1302431267 source:c:\users\santosh\desktop\tryagain babaal quit\tryagain\timer.cpp
+	"timer.h"
+	<SDL.h>
+
+1302163563 c:\users\santosh\desktop\tryagain babaal quit\tryagain\timer.h
+
+1302431986 source:c:\users\santosh\desktop\tryagain babaal quit\tryagain\main.cpp
+	"SDL.h"
+	"SDL_image.h"
+	<SDL_mixer.h>
+	<string>
+	"heli.h"
+	"loader.h"
+	"timer.h"
+	"window.h"
+	"collision.h"
+	"game_functions.h"
+	"play.h"
+
+1302433892 c:\users\santosh\desktop\tryagain babaal quit\tryagain\heli.h
+	"loader.h"
+	"collision.h"
+
+1302432147 c:\users\santosh\desktop\tryagain babaal quit\tryagain\loader.h
+	"SDL.h"
+	"SDL_image.h"
+	<string>
+	<SDL_mixer.h>
+	<SDL_ttf.h>
+	"collision.h"
+
+1302288333 c:\users\santosh\desktop\tryagain babaal quit\tryagain\collision.h
+
+1302247449 c:\users\santosh\desktop\tryagain babaal quit\tryagain\window.h
+	"heli.h"
+	"loader.h"
+
+1302285160 c:\users\santosh\desktop\tryagain babaal quit\tryagain\game_functions.h
+
+1302432447 c:\users\santosh\desktop\tryagain babaal quit\tryagain\play.h
+
+1302189787 source:e:\c++ project  backup\tryagain babaal quit\tryagain\timer.cpp
+	"timer.h"
+	<SDL.h>
+
+1302163563 e:\c++ project  backup\tryagain babaal quit\tryagain\timer.h
+
+1302288442 source:e:\c++ project  backup\tryagain babaal quit\tryagain\main.cpp
+	"SDL.h"
+	"SDL_image.h"
+	<string>
+	<SDL_mixer.h>
+	"heli.h"
+	"loader.h"
+	"timer.h"
+	"window.h"
+	"collision.h"
+	"game_functions.h"
+	"play.h"
+
+1302210268 e:\c++ project  backup\tryagain babaal quit\tryagain\heli.h
+	"loader.h"
+	"collision.h"
+
+1302287126 e:\c++ project  backup\tryagain babaal quit\tryagain\loader.h
+	"SDL.h"
+	"SDL_image.h"
+	<string>
+	<SDL_mixer.h>
+	"collision.h"
+
+1302288333 e:\c++ project  backup\tryagain babaal quit\tryagain\collision.h
+
+1302247449 e:\c++ project  backup\tryagain babaal quit\tryagain\window.h
+	"heli.h"
+	"loader.h"
+
+1302285160 e:\c++ project  backup\tryagain babaal quit\tryagain\game_functions.h
+
+1302287181 e:\c++ project  backup\tryagain babaal quit\tryagain\play.h
+
+1184993104 c:\sdl\include\sdl_ttf.h
+	"SDL.h"
+	"begin_code.h"
+	"close_code.h"
+
+1302431267 source:c:\users\santosh\desktop\tryagain score\tryagain\timer.cpp
+	"timer.h"
+	<SDL.h>
+
+1302163563 c:\users\santosh\desktop\tryagain score\tryagain\timer.h
+
+1302431986 source:c:\users\santosh\desktop\tryagain score\tryagain\main.cpp
+	"SDL.h"
+	"SDL_image.h"
+	<SDL_mixer.h>
+	<string>
+	"heli.h"
+	"loader.h"
+	"timer.h"
+	"window.h"
+	"collision.h"
+	"game_functions.h"
+	"play.h"
+
+1302433892 c:\users\santosh\desktop\tryagain score\tryagain\heli.h
+	"loader.h"
+	"collision.h"
+
+1302432147 c:\users\santosh\desktop\tryagain score\tryagain\loader.h
+	"SDL.h"
+	"SDL_image.h"
+	<string>
+	<SDL_mixer.h>
+	<SDL_ttf.h>
+	"collision.h"
+
+1302288333 c:\users\santosh\desktop\tryagain score\tryagain\collision.h
+
+1302247449 c:\users\santosh\desktop\tryagain score\tryagain\window.h
+	"heli.h"
+	"loader.h"
+
+1302285160 c:\users\santosh\desktop\tryagain score\tryagain\game_functions.h
+
+1302432447 c:\users\santosh\desktop\tryagain score\tryagain\play.h
+
+1302431267 source:c:\users\santosh\desktop\tryagain score\timer.cpp
+	"timer.h"
+	<SDL.h>
+
+1302448091 c:\users\santosh\desktop\tryagain score\timer.h
+
+1302431986 source:c:\users\santosh\desktop\tryagain score\main.cpp
+	"SDL.h"
+	"SDL_image.h"
+	<SDL_mixer.h>
+	<string>
+	"heli.h"
+	"loader.h"
+	"timer.h"
+	"window.h"
+	"collision.h"
+	"game_functions.h"
+	"play.h"
+
+1302451361 c:\users\santosh\desktop\tryagain score\heli.h
+	"loader.h"
+	"collision.h"
+
+1302451476 c:\users\santosh\desktop\tryagain score\loader.h
+	"SDL.h"
+	"SDL_image.h"
+	<string>
+	<SDL_mixer.h>
+	<SDL_ttf.h>
+	"collision.h"
+
+1302451888 c:\users\santosh\desktop\tryagain score\collision.h
+	"constants.h"
+
+1302451545 c:\users\santosh\desktop\tryagain score\window.h
+	"heli.h"
+	"loader.h"
+
+1302285160 c:\users\santosh\desktop\tryagain score\game_functions.h
+
+1302451361 c:\users\santosh\desktop\tryagain score\play.h
+
+1302452009 c:\users\santosh\desktop\tryagain score\constants.h
+
+1302431267 source:e:\c++ project  backup\tryagain const score\timer.cpp
+	"timer.h"
+	<SDL.h>
+
+1302448091 e:\c++ project  backup\tryagain const score\timer.h
+
+1302431986 source:e:\c++ project  backup\tryagain const score\main.cpp
+	"SDL.h"
+	"SDL_image.h"
+	<SDL_mixer.h>
+	<string>
+	"heli.h"
+	"loader.h"
+	"timer.h"
+	"window.h"
+	"collision.h"
+	"game_functions.h"
+	"play.h"
+
+1302451361 e:\c++ project  backup\tryagain const score\heli.h
+	"loader.h"
+	"collision.h"
+
+1302451476 e:\c++ project  backup\tryagain const score\loader.h
+	"SDL.h"
+	"SDL_image.h"
+	<string>
+	<SDL_mixer.h>
+	<SDL_ttf.h>
+	"collision.h"
+
+1302451888 e:\c++ project  backup\tryagain const score\collision.h
+	"constants.h"
+
+1302452009 e:\c++ project  backup\tryagain const score\constants.h
+
+1302451545 e:\c++ project  backup\tryagain const score\window.h
+	"heli.h"
+	"loader.h"
+
+1302285160 e:\c++ project  backup\tryagain const score\game_functions.h
+
+1302451361 e:\c++ project  backup\tryagain const score\play.h
+
+1302431267 source:c:\users\santosh\desktop\tryagain const score\timer.cpp
+	"timer.h"
+	<SDL.h>
+
+1302448091 c:\users\santosh\desktop\tryagain const score\timer.h
+
+1302454405 source:c:\users\santosh\desktop\tryagain const score\main.cpp
+	"SDL.h"
+	"SDL_image.h"
+	<SDL_mixer.h>
+	<string>
+	"heli.h"
+	"loader.h"
+	"timer.h"
+	"window.h"
+	"collision.h"
+	"game_functions.h"
+	"play.h"
+
+1302451361 c:\users\santosh\desktop\tryagain const score\heli.h
+	"loader.h"
+	"collision.h"
+
+1302451476 c:\users\santosh\desktop\tryagain const score\loader.h
+	"SDL.h"
+	"SDL_image.h"
+	<string>
+	<SDL_mixer.h>
+	<SDL_ttf.h>
+	"collision.h"
+
+1302451888 c:\users\santosh\desktop\tryagain const score\collision.h
+	"constants.h"
+
+1302452009 c:\users\santosh\desktop\tryagain const score\constants.h
+
+1302451545 c:\users\santosh\desktop\tryagain const score\window.h
+	"heli.h"
+	"loader.h"
+
+1302460510 c:\users\santosh\desktop\tryagain const score\game_functions.h
+
+1302454405 c:\users\santosh\desktop\tryagain const score\play.h
+
+1302431267 source:c:\users\santosh\desktop\tryagain options\timer.cpp
+	"timer.h"
+	<SDL.h>
+
+1302448091 c:\users\santosh\desktop\tryagain options\timer.h
+
+1302454405 source:c:\users\santosh\desktop\tryagain options\main.cpp
+	"SDL.h"
+	"SDL_image.h"
+	<SDL_mixer.h>
+	<string>
+	"heli.h"
+	"loader.h"
+	"timer.h"
+	"window.h"
+	"collision.h"
+	"game_functions.h"
+	"play.h"
+
+1302451361 c:\users\santosh\desktop\tryagain options\heli.h
+	"loader.h"
+	"collision.h"
+
+1302451476 c:\users\santosh\desktop\tryagain options\loader.h
+	"SDL.h"
+	"SDL_image.h"
+	<string>
+	<SDL_mixer.h>
+	<SDL_ttf.h>
+	"collision.h"
+
+1302451888 c:\users\santosh\desktop\tryagain options\collision.h
+	"constants.h"
+
+1302452009 c:\users\santosh\desktop\tryagain options\constants.h
+
+1302451545 c:\users\santosh\desktop\tryagain options\window.h
+	"heli.h"
+	"loader.h"
+
+1302464352 c:\users\santosh\desktop\tryagain options\game_functions.h
+
+1302462061 c:\users\santosh\desktop\tryagain options\play.h
+
+1302431267 source:e:\c++ project  backup\tryagain options updated\timer.cpp
+	"timer.h"
+	<SDL.h>
+
+1302448091 e:\c++ project  backup\tryagain options updated\timer.h
+
+1302454405 source:e:\c++ project  backup\tryagain options updated\main.cpp
+	"SDL.h"
+	"SDL_image.h"
+	<SDL_mixer.h>
+	<string>
+	"heli.h"
+	"loader.h"
+	"timer.h"
+	"window.h"
+	"collision.h"
+	"game_functions.h"
+	"play.h"
+
+1302451361 e:\c++ project  backup\tryagain options updated\heli.h
+	"loader.h"
+	"collision.h"
+
+1302451476 e:\c++ project  backup\tryagain options updated\loader.h
+	"SDL.h"
+	"SDL_image.h"
+	<string>
+	<SDL_mixer.h>
+	<SDL_ttf.h>
+	"collision.h"
+
+1302451888 e:\c++ project  backup\tryagain options updated\collision.h
+	"constants.h"
+
+1302452009 e:\c++ project  backup\tryagain options updated\constants.h
+
+1302451545 e:\c++ project  backup\tryagain options updated\window.h
+	"heli.h"
+	"loader.h"
+
+1302464466 e:\c++ project  backup\tryagain options updated\game_functions.h
+
+1302462061 e:\c++ project  backup\tryagain options updated\play.h
+
+1302431267 source:c:\users\santosh\desktop\tryagain options updated\timer.cpp
+	"timer.h"
+	<SDL.h>
+
+1302537092 c:\users\santosh\desktop\tryagain options updated\timer.h
+
+1302596736 source:c:\users\santosh\desktop\tryagain options updated\main.cpp
+	"SDL.h"
+	"SDL_image.h"
+	<SDL_mixer.h>
+	<string>
+	"heli.h"
+	"loader.h"
+	"timer.h"
+	"window.h"
+	"collision.h"
+	"game_functions.h"
+	"play.h"
+
+1302598337 c:\users\santosh\desktop\tryagain options updated\heli.h
+	"loader.h"
+	"collision.h"
+
+1302591927 c:\users\santosh\desktop\tryagain options updated\loader.h
+	"SDL.h"
+	"SDL_image.h"
+	<string>
+	<SDL_mixer.h>
+	<SDL_ttf.h>
+	"collision.h"
+	"variables.h"
+
+1302592657 c:\users\santosh\desktop\tryagain options updated\collision.h
+	"constants.h"
+	"variables.h"
+
+1302598337 c:\users\santosh\desktop\tryagain options updated\constants.h
+
+1302580021 c:\users\santosh\desktop\tryagain options updated\window.h
+	"heli.h"
+	"loader.h"
+
+1302591788 c:\users\santosh\desktop\tryagain options updated\game_functions.h
+	<fstream>
+	<sstream>
+	"heli.h"
+
+1302598509 c:\users\santosh\desktop\tryagain options updated\play.h
+
+1302590832 c:\users\santosh\desktop\tryagain options updated\variables.h
+
+1302431267 source:c:\users\santosh\desktop\tryagain collision\timer.cpp
+	"timer.h"
+	<SDL.h>
+
+1302537092 c:\users\santosh\desktop\tryagain collision\timer.h
+
+1302626182 source:c:\users\santosh\desktop\tryagain collision\main.cpp
+	"SDL.h"
+	"SDL_image.h"
+	<SDL_mixer.h>
+	<string>
+	"heli.h"
+	"loader.h"
+	"timer.h"
+	"window.h"
+	"collision.h"
+	"game_functions.h"
+	"play.h"
+
+1302619599 c:\users\santosh\desktop\tryagain collision\heli.h
+	"loader.h"
+	"collision.h"
+
+1302626182 c:\users\santosh\desktop\tryagain collision\loader.h
+	"SDL.h"
+	"SDL_image.h"
+	<string>
+	<SDL_mixer.h>
+	<SDL_ttf.h>
+	"collision.h"
+	"variables.h"
+
+1302592657 c:\users\santosh\desktop\tryagain collision\collision.h
+	"constants.h"
+	"variables.h"
+
+1302598337 c:\users\santosh\desktop\tryagain collision\constants.h
+
+1302626182 c:\users\santosh\desktop\tryagain collision\variables.h
+
+1302580021 c:\users\santosh\desktop\tryagain collision\window.h
+	"heli.h"
+	"loader.h"
+
+1302591788 c:\users\santosh\desktop\tryagain collision\game_functions.h
+	<fstream>
+	<sstream>
+	"heli.h"
+
+1302610780 c:\users\santosh\desktop\tryagain collision\play.h
+
+1302431267 source:c:\users\santosh\desktop\tryagain welcome\timer.cpp
+	"timer.h"
+	<SDL.h>
+
+1302537092 c:\users\santosh\desktop\tryagain welcome\timer.h
+
+1302654535 source:c:\users\santosh\desktop\tryagain welcome\main.cpp
+	"SDL.h"
+	"SDL_image.h"
+	<SDL_mixer.h>
+	<string>
+	"heli.h"
+	"loader.h"
+	"timer.h"
+	"window.h"
+	"collision.h"
+	"game_functions.h"
+	"play.h"
+	"String_Input.h"
+
+1302658219 c:\users\santosh\desktop\tryagain welcome\heli.h
+	"loader.h"
+	"collision.h"
+	"timer.h"
+
+1302650276 c:\users\santosh\desktop\tryagain welcome\loader.h
+	"SDL.h"
+	"SDL_image.h"
+	<string>
+	<SDL_mixer.h>
+	<SDL_ttf.h>
+	"collision.h"
+	"variables.h"
+
+1302658170 c:\users\santosh\desktop\tryagain welcome\collision.h
+	"constants.h"
+	"variables.h"
+
+1302598337 c:\users\santosh\desktop\tryagain welcome\constants.h
+
+1302656795 c:\users\santosh\desktop\tryagain welcome\variables.h
+
+1302580021 c:\users\santosh\desktop\tryagain welcome\window.h
+	"heli.h"
+	"loader.h"
+
+1302655038 c:\users\santosh\desktop\tryagain welcome\game_functions.h
+	<fstream>
+	<sstream>
+	"heli.h"
+	"Highscore.h"
+
+1302649857 c:\users\santosh\desktop\tryagain welcome\play.h
+
+1302658108 c:\users\santosh\desktop\tryagain welcome\highscore.h
+	<iostream>
+	<conio.h>
+	<fstream>
+	<iomanip>
+	<string>
+	<cstdlib>
+
+1302654507 c:\users\santosh\desktop\tryagain welcome\string_input.h
+	<string>
+	<SDL.h>
+	"variables.h"
+	"constants.h"
+
+1302431267 source:c:\users\santosh\desktop\helicopter hurdle\final tryagain\timer.cpp
+	"timer.h"
+	<SDL.h>
+
+1302537092 c:\users\santosh\desktop\helicopter hurdle\final tryagain\timer.h
+
+1302659664 source:c:\users\santosh\desktop\helicopter hurdle\final tryagain\main.cpp
+	"SDL.h"
+	"SDL_image.h"
+	<SDL_mixer.h>
+	<string>
+	"heli.h"
+	"loader.h"
+	"timer.h"
+	"window.h"
+	"obstacles.h"
+	"game_functions.h"
+	"play.h"
+	"Highscore.h"
+	"String_Input.h"
+
+1302662002 c:\users\santosh\desktop\helicopter hurdle\final tryagain\heli.h
+	"loader.h"
+	"obstacles.h"
+	"timer.h"
+
+1302662835 c:\users\santosh\desktop\helicopter hurdle\final tryagain\loader.h
+	"SDL.h"
+	"SDL_image.h"
+	<string>
+	<SDL_mixer.h>
+	<SDL_ttf.h>
+	"obstacles.h"
+	"variables.h"
+
+1302665379 c:\users\santosh\desktop\helicopter hurdle\final tryagain\obstacles.h
+	"constants.h"
+	"variables.h"
+
+1302662881 c:\users\santosh\desktop\helicopter hurdle\final tryagain\constants.h
+
+1302663611 c:\users\santosh\desktop\helicopter hurdle\final tryagain\variables.h
+
+1302664265 c:\users\santosh\desktop\helicopter hurdle\final tryagain\window.h
+	"heli.h"
+	"loader.h"
+
+1302661007 c:\users\santosh\desktop\helicopter hurdle\final tryagain\game_functions.h
+	<sstream>
+	"heli.h"
+	"Highscore.h"
+
+1302665513 c:\users\santosh\desktop\helicopter hurdle\final tryagain\highscore.h
+	<iostream>
+	<conio.h>
+	<fstream>
+	<iomanip>
+	<string>
+	<cstdlib>
+
+1302665541 c:\users\santosh\desktop\helicopter hurdle\final tryagain\play.h
+
+1302654507 c:\users\santosh\desktop\helicopter hurdle\final tryagain\string_input.h
+	<string>
+	<SDL.h>
+	"variables.h"
+	"constants.h"
+
+1302431267 source:c:\users\santosh\desktop\helicopter hurdle\final tryagain code\timer.cpp
+	"timer.h"
+	<SDL.h>
+
+1302537092 c:\users\santosh\desktop\helicopter hurdle\final tryagain code\timer.h
+
+1302659664 source:c:\users\santosh\desktop\helicopter hurdle\final tryagain code\main.cpp
+	"SDL.h"
+	"SDL_image.h"
+	<SDL_mixer.h>
+	<string>
+	"heli.h"
+	"loader.h"
+	"timer.h"
+	"window.h"
+	"obstacles.h"
+	"game_functions.h"
+	"play.h"
+	"Highscore.h"
+	"String_Input.h"
+
+1302666360 c:\users\santosh\desktop\helicopter hurdle\final tryagain code\heli.h
+	"loader.h"
+	"obstacles.h"
+	"timer.h"
+
+1302666322 c:\users\santosh\desktop\helicopter hurdle\final tryagain code\loader.h
+	"SDL.h"
+	"SDL_image.h"
+	<string>
+	<SDL_mixer.h>
+	<SDL_ttf.h>
+	"obstacles.h"
+	"variables.h"
+
+1302665379 c:\users\santosh\desktop\helicopter hurdle\final tryagain code\obstacles.h
+	"constants.h"
+	"variables.h"
+
+1302662881 c:\users\santosh\desktop\helicopter hurdle\final tryagain code\constants.h
+
+1302666322 c:\users\santosh\desktop\helicopter hurdle\final tryagain code\variables.h
+
+1302664265 c:\users\santosh\desktop\helicopter hurdle\final tryagain code\window.h
+	"heli.h"
+	"loader.h"
+
+1302661007 c:\users\santosh\desktop\helicopter hurdle\final tryagain code\game_functions.h
+	<sstream>
+	"heli.h"
+	"Highscore.h"
+
+1302665513 c:\users\santosh\desktop\helicopter hurdle\final tryagain code\highscore.h
+	<iostream>
+	<conio.h>
+	<fstream>
+	<iomanip>
+	<string>
+	<cstdlib>
+
+1302665541 c:\users\santosh\desktop\helicopter hurdle\final tryagain code\play.h
+
+1302654507 c:\users\santosh\desktop\helicopter hurdle\final tryagain code\string_input.h
+	<string>
+	<SDL.h>
+	"variables.h"
+	"constants.h"
+

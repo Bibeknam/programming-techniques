@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_layout_file>
+	<ActiveTarget name="Debug" />
+	<File name="constants.h" open="1" top="0" tabpos="5">
+		<Cursor position="595" topLine="0" />
+	</File>
+	<File name="game_functions.h" open="1" top="0" tabpos="2">
+		<Cursor position="97" topLine="0" />
+	</File>
+	<File name="heli.h" open="1" top="0" tabpos="3">
+		<Cursor position="50" topLine="0" />
+	</File>
+	<File name="loader.h" open="1" top="0" tabpos="4">
+		<Cursor position="0" topLine="0" />
+	</File>
+	<File name="main.cpp" open="1" top="1" tabpos="1">
+		<Cursor position="259" topLine="0" />
+	</File>
+	<File name="obstacles.h" open="1" top="0" tabpos="10">
+		<Cursor position="0" topLine="0" />
+	</File>
+	<File name="play.h" open="1" top="0" tabpos="6">
+		<Cursor position="364" topLine="0" />
+	</File>
+	<File name="timer.cpp" open="1" top="0" tabpos="9">
+		<Cursor position="151" topLine="0" />
+	</File>
+	<File name="timer.h" open="0" top="0" tabpos="8">
+		<Cursor position="642" topLine="0" />
+	</File>
+	<File name="variables.h" open="1" top="0" tabpos="7">
+		<Cursor position="234" topLine="0" />
+	</File>
+	<File name="window.h" open="1" top="0" tabpos="8">
+		<Cursor position="0" topLine="0" />
+	</File>
+</CodeBlocks_layout_file>
