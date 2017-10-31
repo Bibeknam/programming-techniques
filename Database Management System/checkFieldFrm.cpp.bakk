@@ -1,0 +1,766 @@
+///-----------------------------------------------------------------
+///
+/// @file      checkFieldFrm.cpp
+/// @author    bunkdeath
+/// Created:   4/21/2010 10:03:44 PM
+/// @section   DESCRIPTION
+///            checkFieldFrm class implementation
+///
+///------------------------------------------------------------------
+
+#include "checkFieldFrm.h"
+#include "selectDbTableFrm.h"
+//#include"table.h"
+#include "CreateTableFrm.h"
+#include "createFieldFrm.h"
+#include<iostream>
+#include<fstream>
+using namespace std;
+
+wxString a;
+wxString startMsg;
+StartEnd check;
+int EPos,
+    end_pos;           //end position as whole index
+
+wxString table_name;
+int make_gui=0;                 // to create GUI of selected table
+
+
+//Do not add custom headers between
+//Header Include Start and Header Include End
+//wxDev-C++ designer will remove them
+////Header Include Start
+////Header Include End
+
+//----------------------------------------------------------------------------
+// checkFieldFrm
+//----------------------------------------------------------------------------
+//Add Custom Events only in the appropriate block.
+//Code added in other places will be removed by wxDev-C++
+////Event Table Start
+BEGIN_EVENT_TABLE(checkFieldFrm,wxFrame)
+	////Manual Code Start
+	EVT_BUTTON(ID_BTNPREVIOUS,checkFieldFrm::btnPreviousClick)
+	EVT_BUTTON(ID_BTNEDIT,checkFieldFrm::btnEditClick)
+	EVT_BUTTON(ID_BTNDELETE,checkFieldFrm::btnDeleteClick)
+	EVT_BUTTON(ID_BTNNEXT,checkFieldFrm::btnNextClick)
+	EVT_BUTTON(ID_BTNADDRECORD,checkFieldFrm::btnAddrecordClick)
+	EVT_BUTTON(ID_BTNEXIT,checkFieldFrm::btnExitClick)
+	////Manual Code End
+	
+	EVT_CLOSE(checkFieldFrm::OnClose)
+END_EVENT_TABLE()
+////Event Table End
+
+checkFieldFrm::checkFieldFrm(wxWindow *parent, wxWindowID id, const wxString &title, const wxPoint &position, const wxSize& size, long style)
+: wxFrame(parent, id, title, position, size, style)
+{
+	CreateGUIControls();
+}
+
+checkFieldFrm::~checkFieldFrm(){}
+
+void checkFieldFrm::CreateGUIControls()
+{
+	//Do not add custom code between
+	//GUI Items Creation Start and GUI Items Creation End
+	//wxDev-C++ designer will remove them.
+	//Add the custom code before or after the blocks
+	////GUI Items Creation Start
+
+	SetTitle(wxT("checkField"));
+	SetIcon(wxNullIcon);
+	SetSize(8,8,320,334);
+	Center();
+
+	////GUI Items Creation End
+    end_pos=0,
+    SHOW=0,
+    NEXT=0,
+    now=0,
+    EPos=0,
+    start=1,            //declearing for the start of class...
+    field_index=0,
+    total_field=0,
+    index=0,             // no of field of this table.... read it from checkField()
+    Xpos=30,
+    Ypos=10,
+    data_length=0,      //current editing data length
+    add_record=0,       //to return CPos to initial
+    delete_record=0,    //to return CPos to initial
+    save_record=0;      //to return CPos to initial  --> may be in the saved record...		
+
+    
+    
+wxString d=wxGetCwd();
+    //table_name=((selectDbTableFrm*)GetParent())->getTableName();
+
+
+    //getLastPos();
+	//checkField();
+//###################################################################
+	SHOW=1;                                                       //
+    NOW=0;
+//###################################################################
+  	//readTable(index);
+
+
+}
+
+void checkFieldFrm::OnClose(wxCloseEvent& event)
+{
+	Destroy();
+}
+
+
+
+
+
+
+void checkFieldFrm::checkField(){
+    char *character = new char;
+    wxString text,table_design;
+    Xpos=30;
+    Ypos=10;
+
+
+    ifstream file;
+//    file.open("info");
+    //table_design=table_name+".info";
+    //file.open(table_design);
+	file.open(table_info);
+    int is = file.tellg();
+    if(is==-1){
+        wxMessageBox("file absent");
+    }
+    else{
+        while(!file.eof()){
+            file.read(character,1);
+            if(!strcmp(character,".")){// && make_gui){
+                    makeGUI(text);
+                    field_index++;
+                    text.Empty();
+            }
+
+            else if(!(strcmp(character,"\n")) || file.eof()){// && make_gui){                      // Search for ENTER
+                    makeGUI(text);
+                    field_index=0;
+                    text.Empty();
+            }
+            else{
+                text+=character;
+            }
+        }
+    }
+    file.close();
+
+
+	btnPrevious = new wxButton(this, ID_BTNPREVIOUS, wxT("&Previous"),wxPoint(Xpos-=10, Ypos), wxSize(53, 25), 0, wxDefaultValidator, wxT("btnPrevious"));
+    btnPrevious->Enable(false);
+//    if(check.START)
+//        btnPrevious->Enable(false);
+//    else
+//        btnPrevious->Enable(true);
+
+	btnEdit = new wxButton(this, ID_BTNEDIT, wxT("&Edit"), wxPoint(Xpos+=56, Ypos), wxSize(46, 24), 0, wxDefaultValidator, wxT("btnEdit"));
+//    btnEdit->Enable(false);
+
+	btnDelete = new wxButton(this, ID_BTNDELETE, wxT("&Delete"), wxPoint(Xpos+=50, Ypos), wxSize(49, 24), 0, wxDefaultValidator, wxT("btnDelete"));
+//    btnDelete->Enable(false);
+
+    btnNext = new wxButton(this, ID_BTNNEXT, wxT("&Next"), wxPoint(Xpos+=55, Ypos), wxSize(61, 24), 0, wxDefaultValidator, wxT("btnNext"));
+
+	btnAddrecord = new wxButton(this, ID_BTNADDRECORD, wxT("&Add record"), wxPoint(Xpos=40, Ypos+=34), wxSize(75, 25), 0, wxDefaultValidator, wxT("btnAddrecord"));
+//	btnAddrecord->Enable(false);
+	
+	btnExit = new wxButton(this,ID_BTNEXIT,wxT("E&xit"),wxPoint(Xpos+=80,Ypos),wxSize(75,25),0,wxDefaultValidator,wxT("btnExit"));
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+void checkFieldFrm::makeGUI(wxString text){
+
+    switch(field_index){
+        case 1:
+            index++;
+            lblField[index] = new wxStaticText(this, ID_WXSTATICTEXT1, text, wxPoint(Xpos,Ypos), wxDefaultSize, 0, wxT("WxStaticText1"));                
+            Xpos +=60;
+            break;
+        case 2:
+            if(text=="CHAR" || text=="INT"){
+                txtInput[index] = new wxTextCtrl(this, ID_WXEDIT1, wxT(""), wxPoint(Xpos,Ypos), wxSize(121, 19), 0, wxDefaultValidator);
+                a.Printf("%d",index);
+                txtInput[index]->SetValue(a);
+                txtInput[index]->Enable(false);
+                Ypos+=30;
+                Xpos=30;
+            }
+            else{
+            	txtInput[index] = new wxTextCtrl(this, ID_WXMEMO1, wxT(""), wxPoint(Xpos, Ypos), wxSize(185, 89), wxTE_MULTILINE, wxDefaultValidator, wxT("WxMemo1"));
+                a.Printf("%d",index);
+                txtInput[index]->SetValue(a);
+            	txtInput[index]->SetMaxLength(0);
+            	txtInput[index]->SetFocus();
+            	txtInput[index]->SetInsertionPointEnd();
+            	txtInput[index]->Enable(false);
+            	Ypos+=100;
+            	Xpos=30;
+            }
+
+            break;
+        case 3:
+            int length=0,integer,i=0;
+            while(text[i]!='\0'){
+                if((integer = ((int)text[i]-48))<10)    //checking for number
+                    length=length*10+integer;
+                i++;
+            }
+                txtInput[index]->SetMaxLength(length);
+                break;
+        }
+}
+
+
+
+
+
+
+
+
+  /////////////////////////////////////////////////////////
+ ////// remove re occuring of last character repeat///////
+/////////////////////////////////////////////////////////
+
+void checkFieldFrm::btnEditClick(wxCommandEvent &event){
+    fstream file,buffer;
+    wxString field_data,take;
+    switch(Edit){                   //EDIT
+        case 0:
+            for(int i=1;i<=index;i++)
+                txtInput[i]->Enable(true);
+            btnEdit->SetLabel("&Save");
+            Edit=1;
+            break;
+        case 1:                     // SAVE
+            save_record=1;
+            char *character = new char;
+            btnEdit->SetLabel("&Edit");
+            Edit=0;
+            file.open(table_name,/*ios::app|ios::out|*/ios::in);
+            buffer.open("buffer.txt",ios::out);
+            take.erase();
+                for(int i=0;i<=editing_pos;i++){
+                    file.read(character,1);
+                    take+=character;
+                }
+                if(!editing_pos){//==""){
+                    take="1";
+                    wxMessageBox("");
+                }
+                buffer.write(take,strlen(take));
+            buffer.write(">",1);
+            for(int i=1;i<=index;i++){
+                wxString len;
+                field_data=txtInput[i]->GetValue();
+                len.Printf("%d",strlen(field_data));
+                buffer.write(len,strlen(len));
+                buffer.write("<",1);
+                buffer.write(field_data,strlen(field_data));
+                txtInput[i]->Enable(false);
+            }
+            take.erase();
+            for(int i=0;i<(data_length-1);i++)
+                file.read(character,1);           //blank read previous data
+              while(1){
+                file.read(character,1);
+                if(file.eof())
+                    break;
+                else
+                    take+=character;
+            }
+            buffer.write(take,strlen(take));
+            file.close();
+            buffer.close();
+            unlink(table_name);                            // replace file name
+            rename("buffer.txt",table_name);               //replace file name
+            file.open(table_name,ios::in);
+            Edit=0;
+            file.close();
+            break;
+        case 2:                 // AddRecord
+            save_record=1;
+            btnEdit->SetLabel("&Edit");
+            Edit=0;
+
+            fstream file;
+            file.open(table_name,ios::app|ios::out);
+            int i=file.tellg();
+            if(i==-1)
+                wxMessageBox("File not");
+            take.Printf("%d",++end_pos);
+            EPos++;
+            file.write(take,strlen(take));
+            file.write(">",1);
+            for(int i=1;i<=index;i++){
+                field_data=txtInput[i]->GetValue();
+                take.Printf("%d",strlen(field_data));
+                file.write(take,strlen(take));
+                file.write("<",1);
+                file.write(field_data,strlen(field_data));
+                txtInput[i]->Enable(false);
+            }
+            file.close();
+            readTable(index);
+            break;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+void checkFieldFrm::btnExitClick(wxCommandEvent &event){
+    Destroy();
+}
+
+
+
+
+
+
+
+
+
+StartEnd checkFieldFrm::readTable(int index){
+//    NOW=0;
+//    StartEnd asdf;
+//    ifstream file;
+//    //file.open (table_name);
+//	file.open (table_info);
+//    data_length=0;
+//    int ap=file.tellg();
+//    if(ap==-1){
+//        int choice;
+//        choice=wxMessageBox("Field not present\nDo you want to create?","Message",wxYES_NO);
+//        switch(choice){
+//            case wxYES:
+//                Edit=2;
+//				createFieldFrm *createField = new createFieldFrm(NULL);
+//				createField->table(table_name);
+//				createField->Show();
+//Destroy();      
+//                //addRecord();
+//                break;
+//            case wxNO:
+//                Destroy();
+//                break;
+//        }
+//        return asdf;
+//    }
+//    int integer,length=0,field_index=1;//file_size=is.tellg();data_test,
+//    char *character=new char;
+//    wxString fileInput,test,total_data;
+//    editing_pos=file.tellg();
+//    total_data.erase();
+//    while (!file.eof() && field_index<=index)//&&(Fpos+1)!=file_size)          //is.good() loop while e-o-f is reached
+//    {
+//        test.erase();
+//        file.read(character,1);                   // get character from file
+//        data_length++;
+//        test+=character;
+//        total_data+=character;
+//        if((integer = ((int)*character-48))<10){    //checking for number
+//            length=length*10+integer;
+//        }
+//        else if(!strcmp(character,">")){
+//            NOW++;
+//            if(save_record || add_record || delete_record || start){
+//                save_record=add_record=delete_record=start=0;
+//                IPos=PPos=CPos=length;
+//            }
+//            CPos=length;
+//            PPos1=length;
+//            length=0;
+//        }
+//        else if(!strcmp(character,"<")){
+//            fileInput.erase();
+//            for(int i=0;i<length;i++){
+//                file.read(character,1);
+//                total_data+=character;
+//                fileInput+=character;
+//            }
+//            if(file.peek()=='\n'){
+//                file.seekg(ios::beg);
+//                btnNext->Enable(false);
+//            }
+//            if(NOW==SHOW){
+//            txtInput[field_index]->SetValue(fileInput);
+//            field_index++;
+//          }
+//          else{
+//            total_data.erase();
+//            editing_pos=file.tellg();
+//			editing_pos--;
+//        }
+//        length=0;
+//        data_length=strlen(total_data);         //TOTAL LENGTH OF CURRENT DATA
+//        }                                       //else
+//    }                                           //while
+//    if(file.eof()){
+//        check.START=0;
+//        check.END=1;
+//    }
+//    else{
+//        if(CPos==IPos)
+//            check.START=1;
+//        else
+//            check.START=0;
+//        check.END=0;
+//    }
+//    file.close();
+//
+//
+//if(CPos==IPos)
+//    PPos=CPos;
+//    delete character;
+//    return check;
+
+NOW=0;
+    StartEnd asdf;
+    ifstream file;
+    //file.open (table_name);
+	file.open (table_info);
+    data_length=0;
+    int ap=file.tellg();
+    if(ap==-1){
+        int choice;
+        choice=wxMessageBox("Field not present\nDo you want to create?","Message",wxYES_NO);
+        switch(choice){
+            case wxYES:
+                Edit=2;
+				createFieldFrm *createField = new createFieldFrm(NULL);
+				createField->table(table_name);
+				createField->Show();
+Destroy();
+                //addRecord();
+                break;
+            case wxNO:
+                Destroy();
+                break;
+        }
+        return asdf;
+    }
+    int integer,length=0,field_index=1;//file_size=is.tellg();data_test,
+    char *character=new char;
+    wxString fileInput,test,total_data;
+    editing_pos=file.tellg();
+    total_data.erase();
+    while (!file.eof() && field_index<=index)//&&(Fpos+1)!=file_size)          //is.good() loop while e-o-f is reached
+    {
+        test.erase();
+        file.read(character,1);                   // get character from file
+        data_length++;
+        test+=character;
+        total_data+=character;
+        if((integer = ((int)*character-48))<10){    //checking for number
+            length=length*10+integer;
+        }
+        else if(!strcmp(character,">")){
+            NOW++;
+            if(save_record || add_record || delete_record || start){
+                save_record=add_record=delete_record=start=0;
+                IPos=PPos=CPos=length;
+            }
+            CPos=length;
+            PPos1=length;
+            length=0;
+        }
+        else if(!strcmp(character,"<")){
+            fileInput.erase();
+            for(int i=0;i<length;i++){
+                file.read(character,1);
+                total_data+=character;
+                fileInput+=character;
+            }
+            if(file.peek()=='\n'){
+                file.seekg(ios::beg);
+                btnNext->Enable(false);
+            }
+            if(NOW==SHOW){
+                txtInput[field_index]->SetValue(fileInput);
+                field_index++;
+          }
+          else{
+            total_data.erase();
+            editing_pos=file.tellg();
+			editing_pos--;
+        }
+        length=0;
+        data_length=strlen(total_data);         //TOTAL LENGTH OF CURRENT DATA
+        }                                       //else
+    }                                           //while
+    if(file.eof()){
+        check.START=0;
+        check.END=1;
+    }
+    else{
+        if(CPos==IPos)
+            check.START=1;
+        else
+            check.START=0;
+        check.END=0;
+    }
+    file.close();
+
+
+if(CPos==IPos)
+    PPos=CPos;
+    delete character;
+    return check;
+}
+
+
+
+
+
+
+
+
+
+
+void checkFieldFrm::btnNextClick(wxCommandEvent &event){
+    wxString a;
+    NEXT=1;
+    if(SHOW!=EPos){
+        SHOW++;
+        btnPrevious->Enable(true);
+        ifstream is;
+        is.open(table_name);
+        check = readTable(index);
+    }
+    if(SHOW==EPos){
+        btnNext->Enable(false);
+        ifstream is;
+        is.open(table_name);
+        CPos=IPos;
+        PPos=IPos;
+        check=readTable(index);
+    }
+}
+
+
+
+
+
+
+
+
+void checkFieldFrm::btnPreviousClick(wxCommandEvent &event){
+    PREVIOUS=1;
+    wxString a;
+    if(SHOW!=1){
+        SHOW--;
+        ifstream is;
+        is.open(table_name);
+        check = readTable(index);
+        btnNext->Enable(true);
+    }
+    if(SHOW==1){
+        btnPrevious->Enable(false);
+        PREVIOUS=0;
+    }
+}
+
+
+
+
+
+
+
+void checkFieldFrm::btnDeleteClick(wxCommandEvent &event){
+    fstream file,buffer;
+    wxString take;
+    char *character = new char;
+    file.open(table_name,/*ios::app|ios::out|*/ios::in);
+    buffer.open("buffer.txt",ios::out);
+    take.erase();
+    wxString a;
+    a.Printf("%d",editing_pos);
+    wxMessageBox(a);
+    if(editing_pos){
+        for(int i=0;i<=editing_pos;i++){
+            file.read(character,1);
+            take+=character;
+        }
+    }
+        buffer.write(take,strlen(take));
+    take.erase();
+    wxString t;
+    t.Printf("%d",data_length);
+    wxMessageBox(t);
+    for(int i=0;i<(data_length);i++){
+        file.read(character,1);           //blank read previous data
+        take+=character;
+    }
+    wxMessageBox(take);
+    take.erase();
+    while(1){
+        file.read(character,1);
+        if(file.eof())
+            break;
+        else
+            take+=character;
+    }
+    buffer.write(take,strlen(take));
+    file.close();
+    buffer.close();
+    unlink(table_name);                            // replace file name
+    rename("buffer.txt",table_name);               //replace file name
+    file.open(table_name,ios::in);
+    btnEdit->SetLabel("&Edit");
+    Edit=0;
+    file.close();
+    delete_record=1;
+
+	
+	
+	
+	
+/////////////////////////////////////////
+/////	SHOW--; ReadTable();
+ 
+
+}
+
+
+
+
+
+
+void checkFieldFrm::btnAddrecordClick(wxCommandEvent &event){
+    addRecord();
+}
+
+
+void checkFieldFrm::setTableName(wxString table){
+    table_name=table;
+	table_info=table_name+".info";
+	
+	
+	getLastPos();
+	checkField();
+	readTable(index);
+}
+
+
+void saveData(int index){
+    
+}
+
+///////////////////////////////////////////////////////
+////////   Get length of current data stream  ////////
+/////////////////////////////////////////////////////
+
+
+int getLength(int cpos){
+    fstream file;
+    file.open(table_name,ios::app);
+    file.seekg(cpos);
+    int as=file.tellg(),dbl=0;
+    wxString z;
+    z.Printf("%d",as);
+    wxMessageBox(a,"two");
+    wxString test;
+    char *character = new char;
+    int ind=0;
+    file.read(character,1);
+    wxMessageBox(character,"asdf");
+    if(!strcmp(character,">")){
+        wxMessageBox("asdf","asdf");
+        dbl++;
+    }
+    ind++;
+    test.Printf("%d",ind);
+    wxMessageBox(test,"Value of ind");
+    file.close();
+}
+
+/////////////////////////////////////////////////////
+////////////   Edit to current data     ////////////
+///////////////////////////////////////////////////
+
+void getEdited(){
+
+}
+
+
+
+
+
+
+
+void checkFieldFrm::getLastPos(){
+    char *character = new char;
+    int integer,length=0,exist;
+    fstream file;
+    file.open(table_name);
+    exist=file.tellg();
+    if(exist!=-1){
+        while (!file.eof())//&&(Fpos+1)!=file_size)          //is.good() loop while e-o-f is reached
+        {
+            file.read(character,1);                   // get character from file
+            if((integer = ((int)*character-48))<10){    //checking for number
+                length=length*10+integer;
+            }
+            else if(!strcmp(character,">")){
+                end_pos=length;
+                EPos++;
+                length=0;
+            }
+            else if(!strcmp(character,"<")){
+                for(int i=0;i<length;i++){
+                    file.read(character,1);
+                }
+            length=0;
+            }
+        }
+    }
+    file.close();
+}
+
+void checkFieldFrm::addRecord(){
+    btnEdit->SetLabel("&Save");
+    Edit=2;
+    for(int i=1;i<=index;i++){
+        txtInput[i]->SetValue("");
+        txtInput[i]->Enable();
+    }
+
+SHOW=1;
+
+    add_record=1;
+}
+
+
+//void checkFieldFrm::cwd(wxString c){
+//    current_wd=c;
+//    chdir(current_wd);
+//}

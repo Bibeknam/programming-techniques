@@ -1,0 +1,90 @@
+//---------------------------------------------------------------------------
+//
+// Name:        createFieldFrm.cpp
+// Author:      bunkdeath
+// Created:     5/7/2010 8:02:46 PM
+// Description: createFieldFrm class implementation
+//
+//---------------------------------------------------------------------------
+
+#include "createFieldFrm.h"
+
+//Do not add custom headers between
+//Header Include Start and Header Include End
+//wxDev-C++ designer will remove them
+////Header Include Start
+////Header Include End
+
+//----------------------------------------------------------------------------
+// createFieldFrm
+//----------------------------------------------------------------------------
+//Add Custom Events only in the appropriate block.
+//Code added in other places will be removed by wxDev-C++
+////Event Table Start
+BEGIN_EVENT_TABLE(createFieldFrm,wxFrame)
+	////Manual Code Start
+
+    EVT_BUTTON(ID_BUTTON_SAVE,createFieldFrm::Button_SaveClick)
+
+	////Manual Code End
+	
+	EVT_CLOSE(createFieldFrm::OnClose)
+END_EVENT_TABLE()
+////Event Table End
+
+createFieldFrm::createFieldFrm(wxWindow *parent, wxWindowID id, const wxString &title, const wxPoint &position, const wxSize& size, long style)
+: wxFrame(parent, id, title, position, size, style)
+{
+	CreateGUIControls();
+}
+
+createFieldFrm::~createFieldFrm()
+{
+    chdir("..");
+}
+
+void createFieldFrm::CreateGUIControls()
+{
+	//Do not add custom code between
+	//GUI Items Creation Start and GUI Items Creation End
+	//wxDev-C++ designer will remove them.
+	//Add the custom code before or after the blocks
+	////GUI Items Creation Start
+
+	SetTitle(wxT("createField"));
+	SetIcon(wxNullIcon);
+	SetSize(8,8,574,361);
+	Center();
+    i=80;
+	
+	////GUI Items Creation End
+}
+
+void createFieldFrm::OnClose(wxCloseEvent& event)
+{
+	Destroy();
+}
+
+
+void createFieldFrm::createField(wxString table_name){
+    TableName=table_name;
+    tableName = new wxStaticText(this,ID_TABLE_NAME,table_name,wxPoint(10,10));
+	StaticText_FieldLength = new wxStaticText(this, ID_STATICTEXT_FIELDLENGTH, wxT("Field Length"), wxPoint(308, 50), wxDefaultSize, 0, wxT("StaticText_FieldLength"));
+	StaticText_FieldType = new wxStaticText(this, ID_STATICTEXT_FIELDTYPE, wxT("Field Type"), wxPoint(170, 50), wxDefaultSize, 0, wxT("StaticText_FieldType"));
+	StaticText_FieldName = new wxStaticText(this, ID_STATICTEXT_FIELDNAME, wxT("Field Name"), wxPoint(11, 50), wxDefaultSize, 0, wxT("StaticText_FieldName"));
+//    delete(Button_Exit);
+    Textbox_FieldName = new wxTextCtrl(this, ID_TEXTBOX_FIELDNAME, wxT(""), wxPoint(2, i), wxSize(121, 19), 0, wxDefaultValidator, wxT("Textbox_FieldName"));
+	wxArrayString arrayStringFor_ComboBox_FieldType;
+	arrayStringFor_ComboBox_FieldType.Add(wxT("INT"));
+	arrayStringFor_ComboBox_FieldType.Add(wxT("CHAR"));
+	arrayStringFor_ComboBox_FieldType.Add(wxT("LONGTEXT"));
+	ComboBox_FieldType = new wxComboBox(this, ID_COMBOBOX_FIELDTYPE, wxT(""), wxPoint(141, i), wxSize(145, 21), arrayStringFor_ComboBox_FieldType, 0, wxDefaultValidator, wxT("ComboBox_FieldType"));
+    SpinCtrl_FieldLength= new wxSpinCtrl(this, ID_SPINCTRL_FIELDLENGTH, wxT("0"), wxPoint(312, i), wxSize(39, 24), wxSP_ARROW_KEYS, 0, 100, 0);
+	Button_Save = new wxButton(this, ID_BUTTON_SAVE, wxT("Save"), wxPoint(430, i), wxSize(75, 25), 0, wxDefaultValidator, wxT("Button_Save"));
+	i=i+30;
+}
+
+void createFieldFrm::Button_SaveClick(wxCommandEvent& event){
+    delete (Button_Save);
+    createField(TableName);
+}

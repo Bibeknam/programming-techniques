@@ -1,0 +1,58 @@
+# Project: DBMS
+# Compiler: Default GCC compiler
+# Compiler Type: MingW 3
+# Makefile created by wxDev-C++ 7.0 on 23/07/10 11:26
+
+CPP       = g++.exe
+CC        = gcc.exe
+WINDRES   = "windres.exe"
+OBJ       = Objects/MingW/DBMSApp.o Objects/MingW/DBMSFrm.o Objects/MingW/CreateDatabaseFrm.o Objects/MingW/CreateTableFrm.o Objects/MingW/createFieldFrm.o Objects/MingW/selectDbTableFrm.o Objects/MingW/checkFieldFrm.o Objects/MingW/ListViewFrm.o Objects/MingW/DBMS_private.res
+LINKOBJ   = Objects/MingW/DBMSApp.o Objects/MingW/DBMSFrm.o Objects/MingW/CreateDatabaseFrm.o Objects/MingW/CreateTableFrm.o Objects/MingW/createFieldFrm.o Objects/MingW/selectDbTableFrm.o Objects/MingW/checkFieldFrm.o Objects/MingW/ListViewFrm.o Objects/MingW/DBMS_private.res
+LIBS      = -L"C:/Program Files (x86)/Dev-Cpp/Lib" -mwindows -l$(WXLIBNAME) -l$(WXLIBNAME)_gl -lwxtiff -lwxjpeg -lwxpng -lwxzlib -lwxregex -lwxexpat -lkernel32 -luser32 -lgdi32 -lcomdlg32 -lwinspool -lwinmm -lshell32 -lcomctl32 -lole32 -loleaut32 -luuid -lrpcrt4 -ladvapi32 -lwsock32 -lodbc32 -lopengl32  
+INCS      = -I"C:/Program Files (x86)/Dev-Cpp/Include"
+CXXINCS   = -I"C:/Program Files (x86)/Dev-Cpp/lib/gcc/mingw32/3.4.5/include" -I"C:/Program Files (x86)/Dev-Cpp/include/c++/3.4.5/backward" -I"C:/Program Files (x86)/Dev-Cpp/include/c++/3.4.5/mingw32" -I"C:/Program Files (x86)/Dev-Cpp/include/c++/3.4.5" -I"C:/Program Files (x86)/Dev-Cpp/include" -I"C:/Program Files (x86)/Dev-Cpp/" -I"C:/Program Files (x86)/Dev-Cpp/include/3rdparty/wx/plotctrl" -I"C:/Program Files (x86)/Dev-Cpp/include/3rdparty/wx/sheet" -I"C:/Program Files (x86)/Dev-Cpp/include/3rdparty/wx/treemultictrl" -I"C:/Program Files (x86)/Dev-Cpp/include/3rdparty/wx/things" -I"C:/Program Files (x86)/Dev-Cpp/include/3rdparty/wx" -I"C:/Program Files (x86)/Dev-Cpp/include/3rdparty" -I"C:/Program Files (x86)/Dev-Cpp/include/common/wx/msw" -I"C:/Program Files (x86)/Dev-Cpp/include/common/wx/generic" -I"C:/Program Files (x86)/Dev-Cpp/include/common/wx/fl" -I"C:/Program Files (x86)/Dev-Cpp/include/common/wx/gizmos" -I"C:/Program Files (x86)/Dev-Cpp/include/common/wx/html" -I"C:/Program Files (x86)/Dev-Cpp/include/common/wx/mmedia" -I"C:/Program Files (x86)/Dev-Cpp/include/common/wx/net" -I"C:/Program Files (x86)/Dev-Cpp/include/common/wx/ogl" -I"C:/Program Files (x86)/Dev-Cpp/include/common/wx/plot" -I"C:/Program Files (x86)/Dev-Cpp/include/common/wx/protocol" -I"C:/Program Files (x86)/Dev-Cpp/include/common/wx/stc" -I"C:/Program Files (x86)/Dev-Cpp/include/common/wx/svg" -I"C:/Program Files (x86)/Dev-Cpp/include/common/wx/xml" -I"C:/Program Files (x86)/Dev-Cpp/include/common/wx/xrc" -I"C:/Program Files (x86)/Dev-Cpp/include/common/wx" -I"C:/Program Files (x86)/Dev-Cpp/include/common"
+RCINCS    = --include-dir "C:/PROGRA~2/Dev-Cpp/include/common"
+BIN       = Output/MingW/DBMS.exe
+DEFINES   = -D__WXMSW__ -D__GNUWIN32__ -D__WIN95__
+CXXFLAGS  = $(CXXINCS) $(DEFINES) -fno-exceptions -fno-pcc-struct-return -fstrict-aliasing -Wall -D__WXMSW__ -D__GNUWIN32__ -D__WIN95__   -fexpensive-optimizations -O3
+CFLAGS    = $(INCS) $(DEFINES) -fno-exceptions -fno-pcc-struct-return -fstrict-aliasing -Wall -D__WXMSW__ -D__GNUWIN32__ -D__WIN95__   -fexpensive-optimizations -O3
+GPROF     = gprof.exe
+RM        = rm -f
+WXLIBNAME = wxmsw28
+LINK      = g++.exe
+
+.PHONY: all all-before all-after clean clean-custom
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	$(RM) $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(LINK) $(LINKOBJ) -o "Output\MingW\DBMS.exe" $(LIBS) 
+
+Objects/MingW/DBMSApp.o: $(GLOBALDEPS) DBMSApp.cpp DBMSApp.h DBMSFrm.h
+	$(CPP) -c DBMSApp.cpp -o Objects/MingW/DBMSApp.o $(CXXFLAGS)
+
+Objects/MingW/DBMSFrm.o: $(GLOBALDEPS) DBMSFrm.cpp DBMSFrm.h CreateDatabaseFrm.h selectDbTableFrm.h
+	$(CPP) -c DBMSFrm.cpp -o Objects/MingW/DBMSFrm.o $(CXXFLAGS)
+
+Objects/MingW/CreateDatabaseFrm.o: $(GLOBALDEPS) CreateDatabaseFrm.cpp CreateTableFrm.h CreateDatabaseFrm.h createFieldFrm.h DBMSFrm.h
+	$(CPP) -c CreateDatabaseFrm.cpp -o Objects/MingW/CreateDatabaseFrm.o $(CXXFLAGS)
+
+Objects/MingW/CreateTableFrm.o: $(GLOBALDEPS) CreateTableFrm.cpp CreateTableFrm.h createFieldFrm.h
+	$(CPP) -c CreateTableFrm.cpp -o Objects/MingW/CreateTableFrm.o $(CXXFLAGS)
+
+Objects/MingW/createFieldFrm.o: $(GLOBALDEPS) createFieldFrm.cpp createFieldFrm.h checkFieldFrm.h
+	$(CPP) -c createFieldFrm.cpp -o Objects/MingW/createFieldFrm.o $(CXXFLAGS)
+
+Objects/MingW/selectDbTableFrm.o: $(GLOBALDEPS) selectDbTableFrm.cpp createFieldFrm.h selectDbTableFrm.h table.h password.h checkFieldFrm.h functions.h
+	$(CPP) -c selectDbTableFrm.cpp -o Objects/MingW/selectDbTableFrm.o $(CXXFLAGS)
+
+Objects/MingW/checkFieldFrm.o: $(GLOBALDEPS) checkFieldFrm.cpp ListViewFrm.h checkFieldFrm.h selectDbTableFrm.h table.h
+	$(CPP) -c checkFieldFrm.cpp -o Objects/MingW/checkFieldFrm.o $(CXXFLAGS)
+
+Objects/MingW/ListViewFrm.o: $(GLOBALDEPS) ListViewFrm.cpp ListViewFrm.h checkFieldFrm.h
+	$(CPP) -c ListViewFrm.cpp -o Objects/MingW/ListViewFrm.o $(CXXFLAGS)
+
+Objects/MingW/DBMS_private.res: Objects/MingW/DBMS_private.rc DBMSApp.rc 
+	$(WINDRES) --input-format=rc -o Objects/MingW/DBMS_private.res $(RCINCS) Objects/MingW/DBMS_P~1.RC -O coff
